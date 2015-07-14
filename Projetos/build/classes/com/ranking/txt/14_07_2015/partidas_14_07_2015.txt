@@ -1,0 +1,80 @@
+14/07/2015 05:49:13 - New match 0 has started
+14/07/2015 05:49:13 - Silvia killed Hugo using KNIFE
+14/07/2015 05:49:13 - Silvia killed Guilherme using M16
+14/07/2015 05:49:13 - Felipe killed Silvia using M16
+14/07/2015 05:49:13 - <WORLD> killed Joao by DROWN
+14/07/2015 05:49:13 - Joao killed Silvio using M16
+14/07/2015 05:49:13 - Silvia killed Silvio using KNIFE
+14/07/2015 05:49:13 - Hugo killed Joao using M16
+14/07/2015 05:49:13 - Joao killed Silvia using KNIFE
+14/07/2015 05:49:13 - Match 0 has ended
+14/07/2015 05:49:13 - New match 1 has started
+14/07/2015 05:49:13 - Felipe killed Guilherme using M16
+14/07/2015 05:49:13 - Guilherme killed Ariel using KNIFE
+14/07/2015 05:49:13 - Silvio killed Hugo using M16
+14/07/2015 05:49:13 - Hugo killed <WORLD> using M16
+14/07/2015 05:49:13 - Ariel killed Silvia using M16
+14/07/2015 05:49:13 - Silvia killed Guilherme using KNIFE
+14/07/2015 05:49:13 - Silvia killed Guilherme using KNIFE
+14/07/2015 05:49:13 - Ariel killed Silvio using KNIFE
+14/07/2015 05:49:13 - Match 1 has ended
+14/07/2015 05:49:13 - New match 2 has started
+14/07/2015 05:49:13 - Hugo killed <WORLD> using M16
+14/07/2015 05:49:13 - Guilherme killed Hugo using KNIFE
+14/07/2015 05:49:13 - Silvio killed Guilherme using KNIFE
+14/07/2015 05:49:13 - Ariel killed Silvio using M16
+14/07/2015 05:49:13 - Joao killed Felipe using KNIFE
+14/07/2015 05:49:13 - Silvia killed Guilherme using M16
+14/07/2015 05:49:13 - Joao killed Guilherme using KNIFE
+14/07/2015 05:49:13 - <WORLD> killed Ariel by DROWN
+14/07/2015 05:49:13 - Match 2 has ended
+14/07/2015 05:49:13 - New match 3 has started
+14/07/2015 05:49:13 - Ariel killed Silvio using KNIFE
+14/07/2015 05:49:13 - Guilherme killed Silvia using KNIFE
+14/07/2015 05:49:13 - Hugo killed <WORLD> using KNIFE
+14/07/2015 05:49:13 - Hugo killed <WORLD> using M16
+14/07/2015 05:49:13 - Joao killed Felipe using M16
+14/07/2015 05:49:13 - Joao killed Felipe using KNIFE
+14/07/2015 05:49:13 - Felipe killed Guilherme using M16
+14/07/2015 05:49:13 - Ariel killed Joao using M16
+14/07/2015 05:49:13 - Match 3 has ended
+14/07/2015 05:49:13 - New match 4 has started
+14/07/2015 05:49:13 - <WORLD> killed Felipe by DROWN
+14/07/2015 05:49:13 - Joao killed Guilherme using KNIFE
+14/07/2015 05:49:13 - Felipe killed Guilherme using M16
+14/07/2015 05:49:13 - Ariel killed Silvia using M16
+14/07/2015 05:49:13 - Hugo killed Silvia using KNIFE
+14/07/2015 05:49:13 - Silvio killed <WORLD> using M16
+14/07/2015 05:49:13 - Felipe killed Ariel using M16
+14/07/2015 05:49:13 - Ariel killed Silvia using KNIFE
+14/07/2015 05:49:13 - Match 4 has ended
+14/07/2015 05:49:13 - New match 5 has started
+14/07/2015 05:49:13 - Silvia killed Felipe using KNIFE
+14/07/2015 05:49:13 - Ariel killed Silvio using KNIFE
+14/07/2015 05:49:13 - Silvio killed Hugo using M16
+14/07/2015 05:49:13 - Ariel killed Silvio using M16
+14/07/2015 05:49:13 - Guilherme killed Silvia using KNIFE
+14/07/2015 05:49:13 - Guilherme killed Ariel using KNIFE
+14/07/2015 05:49:13 - Guilherme killed Ariel using KNIFE
+14/07/2015 05:49:13 - Guilherme killed Ariel using M16
+14/07/2015 05:49:13 - Match 5 has ended
+14/07/2015 05:49:13 - New match 6 has started
+14/07/2015 05:49:13 - Felipe killed Guilherme using M16
+14/07/2015 05:49:13 - Felipe killed Silvio using KNIFE
+14/07/2015 05:49:13 - Silvio killed Hugo using M16
+14/07/2015 05:49:13 - Silvia killed Hugo using M16
+14/07/2015 05:49:13 - Ariel killed Hugo using M16
+14/07/2015 05:49:13 - Guilherme killed Guilherme using M16
+14/07/2015 05:49:13 - Silvia killed Silvia using KNIFE
+14/07/2015 05:49:13 - Ariel killed Ariel using KNIFE
+14/07/2015 05:49:13 - Match 6 has ended
+14/07/2015 05:49:13 - New match 7 has started
+14/07/2015 05:49:13 - Silvia killed Silvia using KNIFE
+14/07/2015 05:49:13 - Ariel killed Ariel using M16
+14/07/2015 05:49:13 - <WORLD> killed Ariel by DROWN
+14/07/2015 05:49:13 - <WORLD> killed <WORLD> by DROWN
+14/07/2015 05:49:13 - Silvia killed <WORLD> using M16
+14/07/2015 05:49:13 - Silvia killed Silvio using KNIFE
+14/07/2015 05:49:13 - Guilherme killed Silvio using KNIFE
+14/07/2015 05:49:13 - Felipe killed Silvio using M16
+14/07/2015 05:49:13 - Match 7 has ended

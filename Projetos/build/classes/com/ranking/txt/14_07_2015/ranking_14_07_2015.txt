@@ -1,0 +1,113 @@
+Partida número: 0
+Jogador Silvia possui a maior quantidade de vitórias.
+Jogador Silvia Venceu 3 vezes
+Jogador Joao Venceu 2 vezes
+Jogador Felipe Venceu 1 vezes
+Jogador Hugo Venceu 1 vezes
+Partida número: 0
+Jogador Silvia possui a maior quantidade de Derrotas.
+Jogador Silvia Foi morto 2 vezes
+Jogador Joao Foi morto 2 vezes
+Jogador Silvio Foi morto 2 vezes
+Jogador Hugo Foi morto 1 vezes
+Jogador Guilherme Foi morto 1 vezes
+Partida número: 1
+Jogador Ariel possui a maior quantidade de vitórias.
+Jogador Ariel Venceu 2 vezes
+Jogador Silvia Venceu 2 vezes
+Jogador Felipe Venceu 1 vezes
+Jogador Guilherme Venceu 1 vezes
+Jogador Silvio Venceu 1 vezes
+Jogador Hugo Venceu 1 vezes
+Partida número: 1
+Jogador Guilherme possui a maior quantidade de Derrotas.
+Jogador Guilherme Foi morto 3 vezes
+Jogador Ariel Foi morto 1 vezes
+Jogador Hugo Foi morto 1 vezes
+Jogador <WORLD> Foi morto 1 vezes
+Jogador Silvia Foi morto 1 vezes
+Jogador Silvio Foi morto 1 vezes
+Partida número: 2
+Jogador Joao possui a maior quantidade de vitórias.
+Jogador Joao Venceu 2 vezes
+Jogador Hugo Venceu 1 vezes
+Jogador Guilherme Venceu 1 vezes
+Jogador Silvio Venceu 1 vezes
+Jogador Ariel Venceu 1 vezes
+Jogador Silvia Venceu 1 vezes
+Partida número: 2
+Jogador Guilherme possui a maior quantidade de Derrotas.
+Jogador Guilherme Foi morto 3 vezes
+Jogador <WORLD> Foi morto 1 vezes
+Jogador Hugo Foi morto 1 vezes
+Jogador Silvio Foi morto 1 vezes
+Jogador Felipe Foi morto 1 vezes
+Jogador Ariel Foi morto 1 vezes
+Partida número: 3
+Jogador Ariel possui a maior quantidade de vitórias.
+Jogador Ariel Venceu 2 vezes
+Jogador Hugo Venceu 2 vezes
+Jogador Joao Venceu 2 vezes
+Jogador Guilherme Venceu 1 vezes
+Jogador Felipe Venceu 1 vezes
+Partida número: 3
+Jogador <WORLD> possui a maior quantidade de Derrotas.
+Jogador <WORLD> Foi morto 2 vezes
+Jogador Felipe Foi morto 2 vezes
+Jogador Silvio Foi morto 1 vezes
+Jogador Silvia Foi morto 1 vezes
+Jogador Guilherme Foi morto 1 vezes
+Jogador Joao Foi morto 1 vezes
+Partida número: 4
+Jogador Felipe possui a maior quantidade de vitórias.
+Jogador Felipe Venceu 2 vezes
+Jogador Ariel Venceu 2 vezes
+Jogador Joao Venceu 1 vezes
+Jogador Hugo Venceu 1 vezes
+Jogador Silvio Venceu 1 vezes
+Partida número: 4
+Jogador Silvia possui a maior quantidade de Derrotas.
+Jogador Silvia Foi morto 3 vezes
+Jogador Guilherme Foi morto 2 vezes
+Jogador Felipe Foi morto 1 vezes
+Jogador <WORLD> Foi morto 1 vezes
+Jogador Ariel Foi morto 1 vezes
+Partida número: 5
+Jogador Guilherme possui a maior quantidade de vitórias.
+Jogador Guilherme Venceu 4 vezes
+Jogador Ariel Venceu 2 vezes
+Jogador Silvia Venceu 1 vezes
+Jogador Silvio Venceu 1 vezes
+Partida número: 5
+Jogador Ariel possui a maior quantidade de Derrotas.
+Jogador Ariel Foi morto 3 vezes
+Jogador Silvio Foi morto 2 vezes
+Jogador Felipe Foi morto 1 vezes
+Jogador Hugo Foi morto 1 vezes
+Jogador Silvia Foi morto 1 vezes
+Partida número: 6
+Jogador Felipe possui a maior quantidade de vitórias.
+Jogador Felipe Venceu 2 vezes
+Jogador Silvia Venceu 2 vezes
+Jogador Ariel Venceu 2 vezes
+Jogador Silvio Venceu 1 vezes
+Jogador Guilherme Venceu 1 vezes
+Partida número: 6
+Jogador Hugo possui a maior quantidade de Derrotas.
+Jogador Hugo Foi morto 3 vezes
+Jogador Guilherme Foi morto 2 vezes
+Jogador Silvio Foi morto 1 vezes
+Jogador Silvia Foi morto 1 vezes
+Jogador Ariel Foi morto 1 vezes
+Partida número: 7
+Jogador Silvia possui a maior quantidade de vitórias.
+Jogador Silvia Venceu 3 vezes
+Jogador Ariel Venceu 1 vezes
+Jogador Guilherme Venceu 1 vezes
+Jogador Felipe Venceu 1 vezes
+Partida número: 7
+Jogador Silvio possui a maior quantidade de Derrotas.
+Jogador Silvio Foi morto 3 vezes
+Jogador Ariel Foi morto 2 vezes
+Jogador <WORLD> Foi morto 2 vezes
+Jogador Silvia Foi morto 1 vezes
