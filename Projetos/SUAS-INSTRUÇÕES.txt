@@ -1,0 +1,5 @@
+O projeto deve estar no path C:\ ou as classes que fazem referencia à este path deverão sofrer alterações.
+Iniciar Projeto ( modo run ou debug ) pela classe Tester.java
+O sistema criará a estrutura de arquivos necessárias para registro dos logs
+Após o fim dos registros o arquivo com o ranking estará disponível no path
+C:\Projetos\src\com\ranking\txt\data_mes_ano\data_mes_ano_ranking.txt
