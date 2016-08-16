@@ -24,8 +24,5 @@ public class Arma {
 	public void setDanoArma(int danoArma) {
 		this.danoArma = danoArma;
 	}
-	
-	
-	
-	
+		
 }

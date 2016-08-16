@@ -4,25 +4,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 import com.ranking.bean.Arma;
 import com.ranking.bean.Jogador;
 import com.ranking.bean.Partida;
 import com.ranking.business.AcaoPartida;
 import com.ranking.view.Painel;
 
+
+/*
+ * Classe responsável por carregar dados das partidas.
+ */
 public class Tester {
 
 	private static final Tester instance = new Tester();
 	
-	
-	 
 	private Tester() {}
-	
-	/**
-	 * Obtém a instância da Business
-	 * @return
-	 */
+
 	public static Tester getInstance() {
 		return instance;
 	}
@@ -38,10 +35,10 @@ public class Tester {
 			idades = getInstance().getIdades();
 			armas = getInstance().getArmas();
 			List<Jogador>jogadores = new ArrayList<Jogador>();
-			for(int i=0;i<nomes.size();i++){
+			for(int indiceJogadores=0;indiceJogadores<nomes.size();indiceJogadores++){
 				Jogador jogador = new Jogador();
 				
-				jogador.setNomeJogador(nomes.get(i));
+				jogador.setNomeJogador(nomes.get(indiceJogadores));
 				
 				int indiceIdade = new Random().nextInt(idades.size());
 				jogador.setIdadeJogador(Integer.parseInt(idades.get(indiceIdade)));
@@ -49,20 +46,20 @@ public class Tester {
 				if(jogador.getNomeJogador().equalsIgnoreCase("<WORLD>")){
 				
 				List<Arma>listaArma = new ArrayList<Arma>();
-					for(int j=0;j<armas.size();j++){
+					for(int indiceArma=0;indiceArma<armas.size();indiceArma++){
 						
-						if(armas.get(j).getNomeArma().equalsIgnoreCase("DROWN")){
-							listaArma.add(armas.get(j));
+						if(armas.get(indiceArma).getNomeArma().equalsIgnoreCase("DROWN")){
+							listaArma.add(armas.get(indiceArma));
 						}
 						
 					}
 					jogador.setArmasJogador(listaArma);
 				}else{
 					List<Arma>listaArma = new ArrayList<Arma>();
-					for(int j=0;j<armas.size();j++){
+					for(int indiceArma=0;indiceArma<armas.size();indiceArma++){
 					
-						if(!armas.get(j).getNomeArma().equalsIgnoreCase("DROWN")){
-							listaArma.add(armas.get(j));
+						if(!armas.get(indiceArma).getNomeArma().equalsIgnoreCase("DROWN")){
+							listaArma.add(armas.get(indiceArma));
 						}
 					}
 					jogador.setArmasJogador(listaArma);
@@ -86,6 +83,9 @@ public class Tester {
 		}
 
 	}
+	/*
+	 * método responsável por carregar o nome dos jogadores para cada partida.
+	 */
 	public List<String> getNomes() {
 		
 		nomes.add("<WORLD>");
@@ -99,7 +99,9 @@ public class Tester {
 				
 		return nomes;
 	}
-
+	/*
+	 * método responsável por carregar a idade de cada jogador para cada partida.
+	 */
 	public List<String> getIdades() {
 		
 		idades.add("18");
@@ -113,7 +115,9 @@ public class Tester {
 		return idades;
 	}
 
-
+	/*
+	 * método responsável por carregar armas para cada jogador em cada uma das partidas
+	 */
 	public List<Arma> getArmas() {
 	
 		Arma arma = new Arma();
@@ -130,8 +134,6 @@ public class Tester {
 		armas.add(arma);
 		return armas;
 
-	}
-	
-	
+	}	
 
 }

@@ -4,31 +4,20 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Random;
 
-import org.eclipse.jdt.internal.compiler.ast.ThisReference;
-
-import com.ranking.bean.Jogador;
 import com.ranking.bean.Partida;
 
 public class AcaoPartida {
 	
 	private static final AcaoPartida instance = new AcaoPartida();
-	
-	
-	 
+ 
 	private AcaoPartida() {}
-	
-	/**
-	 * Obtém a instância da Business
-	 * @return
-	 */
+
 	public static AcaoPartida getInstance() {
 		return instance;
 	}
@@ -42,12 +31,12 @@ public class AcaoPartida {
 		public static void criaArquivo(String dataComposta) throws IOException {
 			
 			List<String>lista = getArquivos();
-			for(int i=0;i<lista.size();i++){
+			for(int indiceArquivos=0;indiceArquivos<lista.size();indiceArquivos++){
 				
 				String caminho = path+"\\"+dataComposta+"\\";
 				File file = new File(caminho);				
 				file.mkdirs();
-				String caminhoEarquivo = path+"\\"+dataComposta+"\\"+arquivos.get(i)+"_"+dataComposta+".txt";
+				String caminhoEarquivo = path+"\\"+dataComposta+"\\"+arquivos.get(indiceArquivos)+"_"+dataComposta+".txt";
 				file = new File(caminhoEarquivo);
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 				
@@ -77,14 +66,14 @@ public class AcaoPartida {
 			}
 			if(partida!=null&&partida.getJogadores()!=null&&partida.getJogadores().size()>0){
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-				for(int j=0;j<partida.getJogadores().size();j++){
+				for(int indiceJogadores=0;indiceJogadores<partida.getJogadores().size();indiceJogadores++){
 					
-					writer.write(new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").format(new Date()) + " - New match "+j+" has started");  
+					writer.write(new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").format(new Date()) + " - New match "+indiceJogadores+" has started");  
 			        writer.newLine();  
 			        writer.flush(); 
 			        
 			        
-					for(int i=0;i<partida.getJogadores().size();i++){
+					for(int indiceJogadoresPartida=0;indiceJogadoresPartida<partida.getJogadores().size();indiceJogadoresPartida++){
 						int indice = retornaIndice(partida.getJogadores().size());
 						int indiceVitima = retornaIndiceDiferente(partida.getJogadores().size(),indice);
 						int indiceArmaKiller = retornaIndice(partida.getJogadores().get(indice).getArmasJogador().size());
@@ -99,7 +88,7 @@ public class AcaoPartida {
 				        
 				        
 					}
-					writer.write(new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").format(new Date())+" - Match "+j+" has ended");  
+					writer.write(new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").format(new Date())+" - Match "+indiceJogadores+" has ended");  
 			        writer.newLine();  
 			        writer.flush(); 
 			        

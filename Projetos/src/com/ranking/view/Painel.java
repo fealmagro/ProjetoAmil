@@ -1,7 +1,9 @@
 package com.ranking.view;
 
-import java.io.*;
-import java.text.SimpleDateFormat;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -18,14 +20,8 @@ public class Painel{
 
 	private static final Painel instance = new Painel();
 	
-	
-	 
 	private Painel() {}
 	
-	/**
-	 * Obtém a instância da Business
-	 * @return
-	 */
 	public static Painel getInstance() {
 		return instance;
 	}
@@ -37,6 +33,7 @@ public class Painel{
 				
 		String dataComposta = AcaoPartida.getInstance().formataDataParaNomeArquivo(new Date());
 		File file = new File(path+dataComposta+"\\"+"partidas"+"_"+dataComposta+".txt");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(file).useDelimiter("\\ \\n");
 
 		while(scanner.hasNext()){
@@ -48,10 +45,10 @@ public class Painel{
 			Partida partida = new Partida();
 			List<Jogador> listaAssassino=new ArrayList<Jogador>();
 			List <Jogador> listaVitimas=new ArrayList<Jogador>();
-			for(int i=0;i<linhas.length;i++){
+			for(int indiceLinhas=0;indiceLinhas<linhas.length;indiceLinhas++){
 				
 
-				String txtLinha = linhas[i];
+				String txtLinha = linhas[indiceLinhas];
 				String[] linha = txtLinha.split(" ");
 
 				if(!linha[3].equalsIgnoreCase("new")&&!linha[3].equalsIgnoreCase("Match")){
@@ -99,31 +96,31 @@ public class Painel{
 		List<Partida> novaListaPartida = new ArrayList<Partida>();
 		Partida novaPartida = new Partida();
 		
-		for(int m=0;m<listaPartida.size();m++){
+		for(int indicePartidas=0;indicePartidas<listaPartida.size();indicePartidas++){
 			
 			Partida partida = new Partida();
-			partida = listaPartida.get(m);
+			partida = listaPartida.get(indicePartidas);
 			novaPartida = new Partida();
 			novaPartida.setNumeroPartida(partida.getNumeroPartida());
-			for(int i=0;i<partida.getAssassino().size();i++){
+			for(int indiceAssassinos=0;indiceAssassinos<partida.getAssassino().size();indiceAssassinos++){
 				
 				List<String>nomes = new ArrayList<String>();
 				Jogador jogador = new Jogador();
-				jogador = partida.getAssassino().get(i);
+				jogador = partida.getAssassino().get(indiceAssassinos);
 				
 				if(!nomes.contains(jogador.getNomeJogador())){
 					
 					nomes.add(jogador.getNomeJogador());
 					if(!jogador.getNomeJogador().equals("<WORLD>")){
-						int v = 0;
-						for(int j=0;j<partida.getAssassino().size();j++){
-							if(jogador.getNomeJogador().equals(partida.getAssassino().get(j).getNomeJogador())){
+						int indiceVitorias = 0;
+						for(int indiceAssassinoPartida=0;indiceAssassinoPartida<partida.getAssassino().size();indiceAssassinoPartida++){
+							if(jogador.getNomeJogador().equals(partida.getAssassino().get(indiceAssassinoPartida).getNomeJogador())){
 								
-								v++;
+								indiceVitorias++;
 								
 							}				
 						}
-						jogador.setVitoriasJogador(v);
+						jogador.setVitoriasJogador(indiceVitorias);
 										
 						
 					}
@@ -138,25 +135,25 @@ public class Painel{
 			List<String>nomes = new ArrayList<String>();
 			listaAssassino = new ArrayList<Jogador>();
 			
-			for(int i=0;i<partida.getVitima().size();i++){
+			for(int indiceVitimas=0;indiceVitimas<partida.getVitima().size();indiceVitimas++){
 				
 				
 				Jogador jogador = new Jogador();
-				jogador = partida.getVitima().get(i);
+				jogador = partida.getVitima().get(indiceVitimas);
 				
 				if(!nomes.contains(jogador.getNomeJogador())){
 					
 					nomes.add(jogador.getNomeJogador());
 					
-					int n = 0;
-					for(int l=0;l<partida.getVitima().size();l++){
+					int indiceDerrotasJogador = 0;
+					for(int indiceVitimasPartida=0;indiceVitimasPartida<partida.getVitima().size();indiceVitimasPartida++){
 						
-						if(jogador.getNomeJogador().equals(partida.getVitima().get(l).getNomeJogador())){
+						if(jogador.getNomeJogador().equals(partida.getVitima().get(indiceVitimasPartida).getNomeJogador())){
 							
-							n++;
+							indiceDerrotasJogador++;
 						}
 					}
-					jogador.setDerrotasJogador(n);
+					jogador.setDerrotasJogador(indiceDerrotasJogador);
 									
 						
 					listaAssassino.add(jogador);
@@ -178,36 +175,39 @@ public class Painel{
 		gravarArquivoRanking(novaListaPartida);
 		
 	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void organizaJogadorByDerrota(List<Jogador>listaJogador)throws Exception{
 		
 		Collections.sort (listaJogador, new Comparator() {  
-            public int compare(Object o1, Object o2) {  
-                Jogador p1 = (Jogador) o1;  
-                Jogador p2 = (Jogador) o2;  
-                return p1.getDerrotasJogador() < p2.getDerrotasJogador() ? +1 : (p1.getDerrotasJogador() > p2.getDerrotasJogador() ? -1 : 0);  
+            public int compare(Object objeto1, Object objeto2) {  
+                Jogador jogador1 = (Jogador) objeto1;  
+                Jogador jogador2 = (Jogador) objeto2;  
+                return jogador1.getDerrotasJogador() < jogador2.getDerrotasJogador() ? +1 : (jogador1.getDerrotasJogador() > jogador2.getDerrotasJogador() ? -1 : 0);  
             }  
         });  
 		
 	}
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void organizaJogadorByVitoria(List<Jogador>listaJogador)throws Exception{
 		
 		Collections.sort (listaJogador, new Comparator() {  
-            public int compare(Object o1, Object o2) {  
-                Jogador p1 = (Jogador) o1;  
-                Jogador p2 = (Jogador) o2;  
-                return p1.getVitoriasJogador() < p2.getVitoriasJogador() ? +1 : (p1.getVitoriasJogador() > p2.getVitoriasJogador() ? -1 : 0);  
+            public int compare(Object objeto1, Object objeto2) {  
+                Jogador jogador1 = (Jogador) objeto1;  
+                Jogador jogador2 = (Jogador) objeto2;  
+                return jogador1.getVitoriasJogador() < jogador2.getVitoriasJogador() ? +1 : (jogador1.getVitoriasJogador() > jogador2.getVitoriasJogador() ? -1 : 0);  
             }  
         });  
 		
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void organizaPartida(List<Partida>listaPartida)throws Exception{
 		
 		Collections.sort (listaPartida, new Comparator() {  
-            public int compare(Object o1, Object o2) {  
-            	Partida p1 = (Partida) o1;  
-            	Partida p2 = (Partida) o2;  
-                return p1.getNumeroPartida() > p2.getNumeroPartida() ? -1 : (p1.getNumeroPartida() < p2.getNumeroPartida() ? +1 : 0);  
+            public int compare(Object objeto1, Object objeto2) {  
+            	Partida partida1 = (Partida) objeto1;  
+            	Partida partida2 = (Partida) objeto2;  
+                return partida1.getNumeroPartida() > partida2.getNumeroPartida() ? -1 : (partida1.getNumeroPartida() < partida2.getNumeroPartida() ? +1 : 0);  
             }  
         });  
 		
@@ -220,26 +220,26 @@ public class Painel{
 		List<Jogador>listaJogador = new ArrayList<Jogador>();
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
 		
-		for(int i=0;i<listaPartida.size();i++){
+		for(int indicePartida=0;indicePartida<listaPartida.size();indicePartida++){
 			listaJogador = new ArrayList<Jogador>();
-			listaJogador = listaPartida.get(i).getAssassino();
+			listaJogador = listaPartida.get(indicePartida).getAssassino();
 			organizaJogadorByVitoria(listaJogador);
 			List<String>nomes = new ArrayList<String>();
 			if(listaJogador!=null&&listaJogador.size()>0){
 				
-				for(int h=0;h<listaJogador.size();h++){
-					if(!nomes.contains(listaJogador.get(h).getNomeJogador())){
-						nomes.add(listaJogador.get(h).getNomeJogador());
-						if(h==0){
-							writer.write("Partida número: "+listaPartida.get(i).getNumeroPartida());  
+				for(int indiceJogador=0;indiceJogador<listaJogador.size();indiceJogador++){
+					if(!nomes.contains(listaJogador.get(indiceJogador).getNomeJogador())){
+						nomes.add(listaJogador.get(indiceJogador).getNomeJogador());
+						if(indiceJogador==0){
+							writer.write("Partida número: "+listaPartida.get(indicePartida).getNumeroPartida());  
 					        writer.newLine();
-							writer.write("Jogador "+listaJogador.get(h).getNomeJogador()+" possui a maior quantidade de vitórias.");  
+							writer.write("Jogador "+listaJogador.get(indiceJogador).getNomeJogador()+" possui a maior quantidade de vitórias.");  
 					        writer.newLine();  
 					        writer.flush(); 
 						}
 						
-						if(listaJogador.get(h).getVitoriasJogador()>0){
-					        writer.write("Jogador "+listaJogador.get(h).getNomeJogador()+" Venceu "+listaJogador.get(h).getVitoriasJogador()+" vezes");  
+						if(listaJogador.get(indiceJogador).getVitoriasJogador()>0){
+					        writer.write("Jogador "+listaJogador.get(indiceJogador).getNomeJogador()+" Venceu "+listaJogador.get(indiceJogador).getVitoriasJogador()+" vezes");  
 					        writer.newLine();  
 					        writer.flush(); 
 						}
@@ -248,23 +248,23 @@ public class Painel{
 				}
 			}
 			listaJogador = new ArrayList<Jogador>();
-			listaJogador = listaPartida.get(i).getVitima();
+			listaJogador = listaPartida.get(indicePartida).getVitima();
 			organizaJogadorByDerrota(listaJogador);
 			nomes = new ArrayList<String>();
 			if(listaJogador!=null&&listaJogador.size()>0){
-				for(int h=0;h<listaJogador.size();h++){
-					if(!nomes.contains(listaJogador.get(h).getNomeJogador())){
-						nomes.add(listaJogador.get(h).getNomeJogador());
-						if(h==0){
-							writer.write("Partida número: "+listaPartida.get(i).getNumeroPartida());  
+				for(int indiceJogador=0;indiceJogador<listaJogador.size();indiceJogador++){
+					if(!nomes.contains(listaJogador.get(indiceJogador).getNomeJogador())){
+						nomes.add(listaJogador.get(indiceJogador).getNomeJogador());
+						if(indiceJogador==0){
+							writer.write("Partida número: "+listaPartida.get(indicePartida).getNumeroPartida());  
 					        writer.newLine();
-							writer.write("Jogador "+listaJogador.get(h).getNomeJogador()+" possui a maior quantidade de Derrotas.");  
+							writer.write("Jogador "+listaJogador.get(indiceJogador).getNomeJogador()+" possui a maior quantidade de Derrotas.");  
 					        writer.newLine();  
 					        writer.flush(); 
 						}
 						
-						if(listaJogador.get(h).getDerrotasJogador()>0){
-					        writer.write("Jogador "+listaJogador.get(h).getNomeJogador()+" Foi morto "+listaJogador.get(h).getDerrotasJogador()+" vezes");  
+						if(listaJogador.get(indiceJogador).getDerrotasJogador()>0){
+					        writer.write("Jogador "+listaJogador.get(indiceJogador).getNomeJogador()+" Foi morto "+listaJogador.get(indiceJogador).getDerrotasJogador()+" vezes");  
 					        writer.newLine();  
 					        writer.flush(); 
 						}

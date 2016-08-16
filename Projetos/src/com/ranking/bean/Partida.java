@@ -1,14 +1,10 @@
 package com.ranking.bean;
 
 
-import java.util.Date;
 import java.util.List;
-
-
 
 public class Partida {
 	
-
 	private int numeroPartida;
 	private List<Jogador> jogadores;//lista de jogadores dentro da partida
 	private List<Jogador> assassino;//lista com jogadores que mataram na partida
@@ -37,8 +33,6 @@ public class Partida {
 	}
 	public void setVitima(List<Jogador> vitima) {
 		this.vitima = vitima;
-	}
-	
-	
+	}	
 
 }
